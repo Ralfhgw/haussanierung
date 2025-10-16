@@ -1,2 +1,1 @@
 # haussanierung
-Informationen zum Sanierungsstand

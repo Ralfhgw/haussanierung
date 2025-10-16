@@ -1,0 +1,79 @@
+/* Grundlegendes Layout */
+body {
+  font-family: system-ui, sans-serif;
+  margin: 0;
+  background-color: #fafafa;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* Kopfbereich */
+header {
+  text-align: center;
+  padding: 4rem 1rem 2rem;
+  background: linear-gradient(135deg, #7ec8e3, #a5d8ff);
+  color: #00334e;
+}
+
+/* Hauptinhalt */
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Artikelabschnitte */
+.content-section {
+  margin-bottom: 4rem;
+}
+
+.content-section h2 {
+  font-size: 1.8rem;
+  color: #005f73;
+  margin-bottom: 1rem;
+}
+
+.content-section img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.2rem;
+}
+
+.content-section p {
+  font-size: 1.05rem;
+  text-align: justify;
+}
+
+/* Fußbereich */
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: #00334e;
+  color: white;
+  font-size: 0.9rem;
+}
+
+/* Responsives Design */
+@media (max-width: 600px) {
+  header {
+    padding: 2rem 1rem;
+  }
+
+  .content-section h2 {
+    font-size: 1.4rem;
+  }
+
+  main {
+    padding: 1rem;
+  }
+}
+
+img {
+    height: 30vh;
+}
+
+video {
+  height: 40vh;
+}

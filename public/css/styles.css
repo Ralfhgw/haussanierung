@@ -1,4 +1,4 @@
-/* Grundlegendes Layout */
+
 body {
   font-family: system-ui, sans-serif;
   margin: 0;
@@ -7,7 +7,6 @@ body {
   line-height: 1.6;
 }
 
-/* Kopfbereich */
 header {
   text-align: center;
   padding: 4rem 1rem 2rem;
@@ -15,14 +14,16 @@ header {
   color: #00334e;
 }
 
-/* Hauptinhalt */
+#login {
+    text-align: center;
+}
+
 main {
   max-width: 900px;
   margin: 0 auto;
   padding: 2rem;
 }
 
-/* Artikelabschnitte */
 .content-section {
   margin-bottom: 4rem;
 }
@@ -46,7 +47,6 @@ main {
   text-align: justify;
 }
 
-/* Fußbereich */
 footer {
   text-align: center;
   padding: 2rem 1rem;
@@ -55,7 +55,6 @@ footer {
   font-size: 0.9rem;
 }
 
-/* Responsives Design */
 @media (max-width: 600px) {
   header {
     padding: 2rem 1rem;

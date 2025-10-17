@@ -5,6 +5,7 @@ import bcrypt from "bcrypt";
 import cookieParser from "cookie-parser";
 import path from "path";
 import { fileURLToPath } from "url";
+import "bun:dotenv";
 
 declare global {
   namespace Express {

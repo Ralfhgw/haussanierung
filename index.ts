@@ -44,15 +44,19 @@ function authMiddleware(req: express.Request, res: express.Response, next: expre
   const tokenFromHeader = header && header.startsWith("Bearer ") ? header.slice(7) : undefined;
   const token = ((req as any).cookies?.token as string | undefined) ?? tokenFromHeader;
 
+  console.log("authMiddleware token:", token); 
+
   if (!token) return res.redirect("/login");
 
   try {
     const payload = jwt.verify(token as string, JWT_SECRET as string);
     (req as any).user = payload;
     next();
-  } catch (err) {
+  } catch (err: any) {
     console.error("Token validation error:", err);
-    return res.status(403).send("Ungültiges Token");
+   
+    res.clearCookie("token");
+    return res.redirect("/login");
   }
 }
 

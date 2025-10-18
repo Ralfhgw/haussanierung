@@ -44,7 +44,7 @@ function authMiddleware(req: express.Request, res: express.Response, next: expre
   const tokenFromHeader = header && header.startsWith("Bearer ") ? header.slice(7) : undefined;
   const token = ((req as any).cookies?.token as string | undefined) ?? tokenFromHeader;
 
-  console.log("authMiddleware token:", token); 
+  console.log("authMiddleware token:", token);
 
   if (!token) return res.redirect("/login");
 
@@ -54,7 +54,7 @@ function authMiddleware(req: express.Request, res: express.Response, next: expre
     next();
   } catch (err: any) {
     console.error("Token validation error:", err);
-   
+
     res.clearCookie("token");
     return res.redirect("/login");
   }
